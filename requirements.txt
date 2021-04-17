@@ -1,0 +1,10 @@
+celery==4.4.7
+fastapi
+matplotlib
+opencv-python
+aiofiles
+python-multipart
+pyyaml
+seaborn
+uvicorn
+redis
