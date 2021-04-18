@@ -76,6 +76,7 @@ jQuery(document).ready(function () {
                 $('#row_detail').show()
                 $('#result_txt').val(JSON.stringify(res.result['bbox'], undefined, 4))
                 $('#result_img').attr('src', URL + '/' + res.result.file_name)
+                $('#result_link').attr('href', URL + '/' + res.result.file_name)
             } else {
                 alert('Result not ready or already consumed!')
                 $('#row_detail').hide()
