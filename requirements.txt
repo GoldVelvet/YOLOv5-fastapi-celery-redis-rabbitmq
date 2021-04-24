@@ -8,3 +8,4 @@ pyyaml
 seaborn
 uvicorn
 redis
+black

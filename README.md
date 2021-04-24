@@ -1,5 +1,4 @@
 # YOLO v5 object detection end-to-end with FastAPI, Celery, Redis, RabbitMQ and Containers
-
 This repository show the code created to be as a "template" to deploy applications with containers using FastAPI, Celery, Redis and RabbitMQ.
 
 As a demo application, it was build a API service using [YOLO v5](https://github.com/ultralytics/yolov5) to perform object detection.
@@ -10,9 +9,8 @@ Since Yolo is a deep model which may take some time to return results, we will u
 - [RabbitMQ](https://www.rabbitmq.com): A message broker used to route messages between API and the workers from Celery.
 - [Redis](https://redis.io): An in-memory database to store results and process status from the tasks.
 
-The image below ilustrate the data flow from all components.
+The image below illustrate the data flow from all components.
 <img src=img/schema.jpg>
-
 
 # Overview of the code
 - [api/app.py](api/app.py): expose the endpoints and send the request task to celery.
@@ -179,3 +177,9 @@ http://localhost:8000/docs
 http://localhost/
 <img src=img/webapp.gif>
 
+## Development
+Currently only the helper functions are tested, using pytest.
+* `python3 -m venv venv`
+* `source venv/bin/activate`
+* `pip install -r requirements.txt`
+* `black .`
