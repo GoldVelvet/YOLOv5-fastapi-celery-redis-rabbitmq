@@ -12,7 +12,7 @@ class YoloModel:
         try:
             with torch.no_grad():
                 result = self.model(img)
-            result.save('api/static/results/')
+            result.save(save_dir='api/static/results/', exist_ok=True)
             final_result = {}
             data = []
             file_name = f'static/{result.files[0]}'
