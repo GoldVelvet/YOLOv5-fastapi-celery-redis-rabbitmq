@@ -10,7 +10,7 @@ from celery.result import AsyncResult
 from models import Task, Prediction
 import uuid
 import logging
-from pydantic.typing import List
+from typing import List
 import numpy as np
 
 UPLOAD_FOLDER = 'uploads'
